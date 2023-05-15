@@ -42,6 +42,23 @@ function findPROG200(course) {
 const prog200 = courses.find(findPROG200);
 console.log("Prog200 starts", prog200.StartDate);
 
+function findPROJ500(course) {
+  return course.CourseId === 'PROJ500';
+}
+const proj500 = courses.find(findPROJ500);
+console.log('Title of PROJ500:', proj500.Title);
+
+function isUnder50USD(course) {
+  return Number(course.Fee) <= 50;
+}
+const coursesUnder50 = courses.filter(isUnder50USD);
+console.log('Courses under $50');
+for (const course of coursesUnder50) {
+  console.log(' ', course.Fee, course.Title);
+}
+
+function classesIn
+
 //function courseStart(courses) {
 //return
 //}
